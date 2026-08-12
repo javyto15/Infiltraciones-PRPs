@@ -3,124 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Javier Hernández Quinto | Infiltraciones de PRP en Murcia</title>
-    <meta name="description" content="Traumatólogo especialista en Medicina Deportiva y Regenerativa en Murcia. Tratamiento de lesiones mediante Plasma Rico en Plaquetas (PRP).">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <title>Dr. Javier Hernández Quinto | Especialista en Infiltraciones de PRP</title>
+    <meta name="description" content="Traumatólogo especialista en Medicina Deportiva y Regenerativa. Infiltraciones de Plasma Rico en Plaquetas (PRP) en Murcia, Torrevieja y Pilar de la Horadada.">
+    
+    <!-- Fuentes modernas -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
+
     <style>
         :root {
-            --primary: #1e3d59;
-            --secondary: #17b978;
-            --dark: #222831;
-            --light: #f5f7fa;
+            --primary: #0f2c59;       /* Azul marino profundo premium */
+            --accent: #00b4d8;        /* Azul médico brillante */
+            --dark: #1e293b;          /* Gris pizarra oscuro para texto */
+            --light: #f8fafc;         /* Fondo gris claro limpio */
             --white: #ffffff;
-            --whatsapp: #25D366;
+            --whatsapp: #25D366;      /* Verde WhatsApp */
+            --shadow: 0 10px 30px rgba(15, 44, 89, 0.05);
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.6; background-color: var(--white); }
-        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; color: var(--primary); font-weight: 700; }
-        .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 60px 0; }
-        .btn { display: inline-block; background-color: var(--secondary); color: var(--white); padding: 14px 28px; text-decoration: none; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; border: none; cursor: pointer; }
-        .btn:hover { background-color: #139a63; transform: translateY(-2px); }
-        header { background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; max-width: 1200px; margin: 0 auto; }
-        .logo { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--primary); }
-        .logo span { color: var(--secondary); }
-        .hero { background: linear-gradient(135deg, rgba(30,61,89,0.95) 0%, rgba(15,30,45,0.95) 100%); color: var(--white); padding: 100px 0; text-align: center; }
-        .hero h1 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; opacity: 0.9; }
-        .badge-med { display: inline-block; background-color: rgba(23, 185, 120, 0.2); border: 1px solid var(--secondary); color: var(--secondary); padding: 5px 15px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 15px; text-transform: uppercase; }
-        .doctor-profile { display: flex; align-items: center; gap: 50px; background-color: var(--light); border-radius: 12px; padding: 40px; margin-top: -40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); position: relative; z-index: 10; }
-        .doc-img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; border: 5px solid var(--white); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .doc-info h2 { margin-bottom: 10px; }
-        .doc-subtitle { color: var(--secondary); font-weight: 600; margin-bottom: 15px; }
-        .doc-meta { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-        .doc-hospitals { margin-top: 15px; font-size: 0.95rem; }
-        .doc-hospitals li { list-style: none; margin-bottom: 5px; }
-        .doc-hospitals i { color: var(--primary); margin-right: 8px; }
-        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; position: relative; padding-bottom: 15px; }
-        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--secondary); }
-        .grid-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background-color: var(--white); padding: 30px; border-radius: 8px; border: 1px solid #eef2f5; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
-        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
-        .card h3 { margin-bottom: 12px; font-size: 1.25rem; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+            background-color: var(--white);
+            background-image: radial-gradient(rgba(0, 180, 216, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lexend', sans-serif;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* --- BOTONES MODERNOS --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Lexend', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(15, 44, 89, 0.15);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(15, 44, 89, 0.25);
+            background-color: #0a1f40;
+        }
+
+        .btn-ws {
+            background-color: var(--whatsapp);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-ws:hover {
+            background-color: #1ebd54;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* --- CABECERA --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'Lexend', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+
+        /* --- HERO PRINCIPAL --- */
+        .hero {
+            background: linear-gradient(135deg, #0f2c59 0%, #07142b 100%);
+            color: var(--white);
+            padding: 120px 0 160px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: var(--white);
+            transform: skewY(-2deg);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            line-height: 1.2;
+            max-width: 850px;
+            margin: 0 auto 24px auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            color: #cbd5e1;
+        }
+
+        .badge-med {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(0, 180, 216, 0.15);
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            color: #90e0ef;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- TARJETA DEL DOCTOR --- */
+        .doctor-profile {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+            background-color: var(--white);
+            border-radius: 24px;
+            padding: 50px;
+            margin-top: -100px;
+            box-shadow: 0 20px 40px rgba(15, 44, 89, 0.08);
+            position: relative;
+            z-index: 10;
+            border: 1px solid rgba(15, 44, 89, 0.04);
+        }
+
+        .doc-img-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+        }
+
+        .doc-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .doc-info h2 { font-size: 2.2rem; margin-bottom: 8px; }
+        .doc-subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: 16px; }
+        .doc-meta { font-size: 0.9rem; color: #64748b; background-color: var(--light); display: inline-block; padding: 4px 12px; border-radius: 6px; margin-bottom: 24px; }
+        
+        /* Hospitales y Ciudades */
+        .doc-locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 24px;
+        }
+
+        .loc-block h4 { font-family: 'Lexend', sans-serif; font-size: 1.05rem; margin-bottom: 12px; color: var(--primary); display: flex; align-items: center; gap: 8px;}
+        .loc-block ul { list-style: none; }
+        .loc-block li { font-size: 0.95rem; color: #475569; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
+        .loc-block li i { color: var(--accent); margin-top: 5px; font-size: 0.85rem; }
+
+        /* --- SECCIÓN ZONAS DE INFILTRACIÓN (NUEVA) --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+        }
+        .section-title span { color: var(--accent); }
+
+        .grid-treatments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .treat-card {
+            background-color: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .treat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(15, 44, 89, 0.1);
+        }
+
+        .treat-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .treat-content { padding: 24px; }
+        .treat-content h3 { font-size: 1.3rem; margin-bottom: 10px; }
+        .treat-content p { color: #475569; font-size: 0.95rem; }
+
+        /* --- SECCIÓN BENEFICIOS BIOLÓGICOS --- */
         .bg-light { background-color: var(--light); }
-        .timeline { max-width: 800px; margin: 0 auto; position: relative; }
-        .timeline-item { padding: 20px 30px; position: relative; border-left: 2px solid var(--primary); margin-left: 20px; }
-        .timeline-number { position: absolute; left: -16px; top: 22px; background-color: var(--primary); color: var(--white); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
-        .timeline-item h3 { margin-bottom: 10px; }
-        .cta-box { background-color: var(--primary); color: var(--white); padding: 50px; border-radius: 12px; text-align: center; }
-        .cta-box h2 { color: var(--white); margin-bottom: 15px; }
-        .cta-box p { max-width: 600px; margin: 0 auto 30px auto; opacity: 0.9; }
-        footer { background-color: #1a1e24; color: #a0aec0; padding: 30px 0; font-size: 0.9rem; text-align: center; }
-        .disclaimer { font-size: 0.75rem; color: #718096; margin-top: 15px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.4; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: var(--white); height: 60px; padding: 0 25px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Montserrat', sans-serif; font-weight: 600; text-decoration: none; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); z-index: 9999; }
-        .whatsapp-float i { font-size: 1.6rem; }
-        @media (max-width: 768px) {
-            .doctor-profile { flex-direction: column; text-align: center; gap: 25px; }
-            .whatsapp-float { padding: 0; width: 60px; height: 60px; border-radius: 50%; }
-            .whatsapp-float span { display: none; }
+        
+        .grid-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <div class="logo">Dr. J. Hernández <span>Quinto</span></div>
-            <a href="https://wa.me" class="btn" style="padding: 8px 16px; font-size: 0.9rem;" target="_blank">Pedir Cita</a>
-        </div>
-    </header>
-    <section class="hero">
-        <div class="container">
-            <span class="badge-med">Medicina Regenerativa Avanzada</span>
-            <h1>Infiltraciones de Plasma Rico en Plaquetas (PRP)</h1>
-            <p>Recupere su movilidad y acelere la curación de lesiones mediante terapias biológicas seguras en Murcia.</p>
-            <a href="https://wa.me" class="btn" target="_blank"><i class="fa-brands fa-whatsapp"></i> Agendar Consulta Vía WhatsApp</a>
-        </div>
-    </section>
-    <section class="container" style="padding-top: 0;">
-        <div class="doctor-profile">
-            <img src="https://unsplash.com" alt="Dr. Javier Hernández" class="doc-img">
-            <div class="doc-info">
-                <h2>Dr. Javier Hernández Quinto</h2>
-                <div class="doc-subtitle">Traumatólogo especialista en Medicina Deportiva</div>
-                <p class="doc-meta">Nº de Colegiado: 30/3009248 (Murcia)</p>
-                <p>Especialista en tratamiento biológico y regenerativo de patologías musculoesqueléticas.</p>
-                <ul class="doc-hospitals">
-                    <li><i class="fa-solid fa-hospital"></i> Hospital Virgen de la Arrixaca</li>
-                    <li><i class="fa-solid fa-hospital"></i> Hospital IMED Fuensanta</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="container">
-        <h2 class="section-title">Beneficios del PRP</h2>
-        <div class="grid-benefits">
-            <div class="card"><i class="fa-solid fa-hand-holding-medical"></i><h3>100% Autólogo</h3><p>Obtenido de tu propia sangre, sin riesgo de rechazo.</p></div>
-            <div class="card"><i class="fa-solid fa-person-running"></i><h3>Regeneración</h3><p>Acelera la reparación natural de tendones y cartílagos.</p></div>
-            <div class="card"><i class="fa-solid fa-kit-medical"></i><h3>Sin Cirugía</h3><p>Disminuye el dolor crónico sin pasar por quirófano.</p></div>
-        </div>
-    </section>
-    <section class="bg-light">
-        <div class="container">
-            <h2 class="section-title">El Proceso</h2>
-            <div class="timeline">
-                <div class="timeline-item"><div class="timeline-number">1</div><h3>Valoración</h3><p>Estudio clínico previo de la lesión.</p></div>
-                <div class="timeline-item"><div class="timeline-number">2</div><h3>Procesado</h3><p>Centrifugado de la muestra de sangre.</p></div>
-                <div class="timeline-item"><div class="timeline-number">3</div><h3>Infiltración</h3><p>Aplicación ambulatoria guiada.</p></div>
-            </div>
-        </div>
-    </section>
-    <section class="container">
-        <div class="cta-box">
-            <h2>¿Listo para empezar?</h2>
-            <p>Coordinamos su cita de forma personalizada a través de WhatsApp.</p>
-            <a href="https://wa.me" class="btn" style="background-color: var(--white); color: var(--primary);" target="_blank">Solicitar Cita por WhatsApp</a>
-        </div>
-    </section>
-    <footer>
-        <div class="container" style="padding: 20px 0;">
-            <p>&copy; 2026 Dr. Javier Hernández Quinto. C/ Trinidad 3, Murcia.</p>
-            <p class="disclaimer">Aviso: Divulgativo, no sustituye diagnóstico médico.</p>
-        </div>
-    </footer>
+
+        .benefit-card {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(15, 44, 89, 0.02);
+            text-align: center;
+        }
+
+        .benefit-card .icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(0, 180, 216, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+        }
+
+        .benefit-card i { font-size: 2rem; color: var(--accent); }
+        .benefit-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
+        .benefit-card p { color: #64748b; font-size: 0.95rem; }
+
+        /* --- CAJA DE LLAMADA A LA ACCIÓN --- */
+        .cta-box {
+            background: linear-gradient(135deg, #0f2c59 0%, #1e3d59 100%);
+            color: var(--white);
+            padding: 60px 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(15, 44, 89, 0.2);
+        }
+        .cta-box h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 16px; }
+        .cta-box p { max-width: 600px; margin: 0 auto 32px auto; color: #e2e8f0; font-size: 1.1rem; }
+
+        /* --- PIE DE PÁGINA --- */
+        footer {
+            background-color: #0b132b;
