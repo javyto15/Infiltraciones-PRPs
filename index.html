@@ -17,43 +17,71 @@
             --light: #f8fafc;
             --white: #ffffff;
             --whatsapp: #25D366;
-            --shadow: 0 10px 30px rgba(15, 44, 89, 0.05);
+            --whatsapp-dark: #1da851;
+            --shadow: 0 10px 30px rgba(15, 44, 89, 0.06);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark); line-height: 1.7; background-color: var(--white); }
         h1, h2, h3 { font-family: 'Lexend', sans-serif; color: var(--primary); font-weight: 700; }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 80px 0; }
-        .btn { display: inline-flex; align-items: center; gap: 10px; background-color: var(--primary); color: var(--white); padding: 14px 32px; text-decoration: none; border-radius: 50px; font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 1rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(15, 44, 89, 0.15); }
-        .btn:hover { transform: translateY(-3px); background-color: #0a1f40; }
-        .btn-ws { background-color: var(--whatsapp); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2); }
-        .btn-ws:hover { background-color: #1ebd54; transform: translateY(-3px); }
-        header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.02); }
+        
+        /* Botones generales y WhatsApp */
+        .btn-wa-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--whatsapp);
+            color: var(--white);
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Lexend', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+        .btn-wa-main:hover {
+            background-color: var(--whatsapp-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        .btn-wa-main i { font-size: 1.4rem; }
+
+        header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.03); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 16px 5%; max-width: 1300px; margin: 0 auto; }
         .logo { font-family: 'Lexend', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
-        .hero { background: linear-gradient(135deg, #0f2c59 0%, #07142b 100%); color: var(--white); padding: 120px 0 160px 0; text-align: center; position: relative; }
+        
+        .hero { background: linear-gradient(135deg, #0f2c59 0%, #07142b 100%); color: var(--white); padding: 120px 0 160px 0; text-align: center; }
         .hero h1 { color: var(--white); font-size: 3rem; line-height: 1.2; max-width: 850px; margin: 0 auto 24px auto; }
         .hero p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 40px auto; color: #cbd5e1; }
         .badge-med { display: inline-flex; align-items: center; gap: 6px; background-color: rgba(0, 180, 216, 0.15); border: 1px solid rgba(0, 180, 216, 0.3); color: #90e0ef; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; text-transform: uppercase; }
+        
         .doctor-profile { display: grid; grid-template-columns: 300px 1fr; gap: 50px; background-color: var(--white); border-radius: 24px; padding: 50px; margin-top: -100px; box-shadow: 0 20px 40px rgba(15, 44, 89, 0.08); position: relative; z-index: 10; border: 1px solid rgba(15, 44, 89, 0.04); }
         .doc-img { width: 250px; height: 250px; border-radius: 20px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.08); margin: 0 auto; display: block; }
         .doc-info h2 { font-size: 2.2rem; margin-bottom: 8px; }
         .doc-subtitle { color: var(--accent); font-weight: 600; font-size: 1.1rem; margin-bottom: 16px; }
         .doc-meta { font-size: 0.9rem; color: #64748b; background-color: var(--light); display: inline-block; padding: 4px 12px; border-radius: 6px; margin-bottom: 24px; }
+        
         .doc-locations-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; border-top: 1px solid #e2e8f0; padding-top: 24px; }
         .loc-block h4 { font-family: 'Lexend', sans-serif; font-size: 1.05rem; margin-bottom: 12px; color: var(--primary); display: flex; align-items: center; gap: 8px; }
         .loc-block ul { list-style: none; }
         .loc-block li { font-size: 0.95rem; color: #475569; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 8px; }
         .loc-block li i { color: var(--accent); margin-top: 5px; font-size: 0.85rem; }
+        
         .section-title { text-align: center; margin-bottom: 50px; font-size: 2.2rem; }
         .section-title span { color: var(--accent); }
+        
         .grid-treatments { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .treat-card { background-color: var(--white); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #f1f5f9; }
-        .treat-img { width: 100%; height: 180px; object-fit: cover; }
+        .treat-card { background-color: var(--white); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid #f1f5f9; transition: transform 0.3s ease; }
+        .treat-card:hover { transform: translateY(-5px); }
+        .treat-img { width: 100%; height: 200px; object-fit: cover; }
         .treat-content { padding: 24px; }
         .treat-content h3 { font-size: 1.3rem; margin-bottom: 10px; }
         .treat-content p { color: #475569; font-size: 0.95rem; }
-        .price-tag { display: inline-block; background: rgba(0, 180, 216, 0.1); color: var(--primary); font-weight: 700; padding: 4px 10px; border-radius: 4px; font-size: 0.9rem; margin-top: 10px; }
+        
         .bg-light { background-color: var(--light); }
         .grid-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .benefit-card { background-color: var(--white); padding: 40px 30px; border-radius: 16px; box-shadow: var(--shadow); text-align: center; }
@@ -61,14 +89,39 @@
         .benefit-card i { font-size: 2rem; color: var(--accent); }
         .benefit-card h3 { font-size: 1.25rem; margin-bottom: 12px; }
         .benefit-card p { color: #64748b; font-size: 0.95rem; }
-        .cta-box { background: linear-gradient(135deg, #0f2c59 0%, #1e3d59 100%); color: var(--white); padding: 60px 40px; border-radius: 24px; text-align: center; box-shadow: 0 15px 35px rgba(15, 44, 89, 0.2); }
+        
+        .cta-box { background: linear-gradient(135deg, #0f2c59 0%, #1e3d59 100%); color: var(--white); padding: 70px 40px; border-radius: 24px; text-align: center; box-shadow: 0 15px 35px rgba(15, 44, 89, 0.2); }
         .cta-box h2 { color: var(--white); font-size: 2.2rem; margin-bottom: 16px; }
         .cta-box p { max-width: 600px; margin: 0 auto 32px auto; color: #e2e8f0; font-size: 1.1rem; }
+        
         footer { background-color: #0b132b; color: #94a3b8; padding: 40px 0; font-size: 0.9rem; border-top: 1px solid #1e293b; text-align: center; }
         .disclaimer { font-size: 0.75rem; color: #64748b; margin-top: 24px; max-width: 900px; margin-left: auto; margin-right: auto; line-height: 1.5; }
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: var(--whatsapp); color: var(--white); height: 60px; padding: 0 24px; border-radius: 50px; display: flex; align-items: center; justify-content: center; gap: 12px; font-family: 'Lexend', sans-serif; font-weight: 600; font-size: 1rem; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35); z-index: 9999; transition: all 0.3s ease; }
-        .whatsapp-float i { font-size: 1.7rem; }
-        .whatsapp-float:hover { transform: scale(1.05) translateY(-3px); background-color: #1ebd54; }
+        
+        /* Banner flotante de WhatsApp permanente abajo a la derecha */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp);
+            color: var(--white);
+            height: 60px;
+            padding: 0 26px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-family: 'Lexend', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 99999;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float i { font-size: 1.8rem; }
+        .whatsapp-float:hover { transform: scale(1.05) translateY(-3px); background-color: var(--whatsapp-dark); }
+        
         @media (max-width: 900px) {
             .doctor-profile { grid-template-columns: 1fr; gap: 30px; padding: 30px; margin-top: -60px; }
             .doc-locations-grid { grid-template-columns: 1fr; gap: 24px; }
@@ -82,27 +135,23 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">Dr. J. Hernández <span>Quinto</span></a>
-            <a href="https://wa.me" class="btn btn-ws" style="padding: 10px 20px; font-size: 0.9rem;" target="_blank">
+            <a href="https://wa.me" class="btn-wa-main" style="padding: 10px 22px; font-size: 0.9rem;" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Cita WhatsApp
             </a>
         </div>
     </header>
+
     <section class="hero">
         <div class="container">
             <span class="badge-med"><i class="fa-solid fa-star"></i> Medicina Deportiva & Regenerativa Avanzada</span>
             <h1>Tratamiento Avanzado de Lesiones con Plasma Rico en Plaquetas (PRP)</h1>
             <p>Acelere la curación de articulaciones, tendones y ligamentos mediante terapias biológicas seguras sin pasar por quirófano.</p>
-            <a href="https://wa.me" class="btn btn-ws" target="_blank">
+            <a href="https://wa.me" class="btn-wa-main" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Solicitar Cita por WhatsApp
             </a>
         </div>
     </section>
+
     <section class="container" style="padding-top: 0;">
         <div class="doctor-profile">
             <div class="doc-img-container">
-                <img src="doctor-javier.jpg" alt="Dr. Javier Hernández Quinto" class="doc-img" onerror="this.src='https://unsplash.com'">
-            </div>
-            <div class="doc-info">
-                <h2>Dr. Javier Hernández Quinto</h2>
-                <div class="doc-subtitle">Médico Especialista en Cirugía Ortopédica y Traumatología</div>
-                <span class="doc-meta">Nº Colegiado: 30/3009248 (Región de Murcia)</span>
